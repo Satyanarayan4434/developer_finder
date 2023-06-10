@@ -32,21 +32,21 @@
                 class="inputBox w-[40rem] h-14 border-none outline-none rounded-md px-10 text-s opacity-100 shadow-md shadow-slate-400"
                 id="inputBox" placeholder="Enter a GitHub Username..." />
             <button
-                class="bg-blue-700 text-white p-2 rounded-md absolute top-2 right-3 hover:shadow-sm hover:shadow-slate-600">
+                class="bg-blue-700 text-white p-2 rounded-md absolute top-2 right-3 hover:shadow-sm hover:shadow-slate-600" onclick="fetchUserInfo()">
                 Search
             </button>
         </div>
         <div class="profileInfo mt-10 min-h-[25rem] w-full bg-white rounded-md shadow-md shadow-slate-500">
             <div class="flex justify-between p-3 relative">
-                <img src="./assets/images/profileImg.svg" alt="" id="profileImg" class="w-[10rem] h-[10rem]" />
+                <img src="./assets/images/profileImg.svg" alt="" id="profileImg" class="w-[10rem] h-[10rem] rounded-full" />
                 <div class="flex flex-col absolute left-[32%] top-[25%]" id="profileDetails">
                     <h2 class="font-extrabold text-xl opacity-85" id="name">
                         SATYANARAYAN SEN
                     </h2>
-                    <a href="https://github.com/Satyanarayan4434" class="text-blue-700 font-light opacity-90 text-sm"
+                    <a href="" class="text-blue-700 font-light opacity-90 text-sm"
                         id="user" target="_blank">@Satyanarayan4434</a>
                 </div>
-                <h2 class="font-light opacity-90 absolute top-[27%] right-3 text-sm" id="date">
+                <h2 class="font-light opacity-90 absolute top-[27%] right-3 text-sm" id="JoinedDate">
                     Joined 20 Jan 2020
                 </h2>
                 <p class="w-[250px] absolute top-[60%] left-[32%] text-sm opacity-90" id="bio">
@@ -56,39 +56,38 @@
                 <div class="h-9 w-9 bg-blue-800 absolute top-[127%] left-[31%] rounded-md blur-sm"></div>
             </div>
             <div class="h-[5rem] w-[24.7rem] bg-slate-200 opacity-75 ml-[12rem] rounded-md flex justify-between items-center px-8">
-                <div id="repo" class="">
+                <div  class="">
                     <p class="font-semibold text-black text-lg">Repo</p>
-                    <p class="font-bold text-black text-sm">33</p>
+                    <p class="font-bold text-black text-sm" id="repo">33</p>
                 </div>
-                <div id="Follwers" class="">
+                <div class="">
                     <p class="font-semibold text-black text-sm">Follwers</p>
-                    <p class="font-bold text-black text-sm">3</p>
+                    <p class="font-bold text-black text-sm"  id="Follwers">3</p>
                 </div>
-                <div id="Following" class="">
+                <div  class="">
                     <p class="font-semibold text-black text-lg">Following</p>
-                    <p class="font-bold text-black text-sm">7</p>
+                    <p class="font-bold text-black text-sm" id="Following">7</p>
                 </div>
             </div>
-            <div class="h-[5rem] w-[24.7rem] ml-[12rem] flex justify-between mt-6">
+            <div class="w-[24.7rem] ml-[12rem] flex justify-between mt-6">
                 <div class="flex items-baseline gap-3 text-xs">
                     <i class="fa-solid fa-location-dot"></i>
-                    <p>Kolkata, India</p>
+                    <p id="location">Kolkata, India</p>
                 </div>
                 <div class="flex items-baseline gap-3 text-xs">
                     <i class="fa-solid fa-link"></i>
-                    <a href="https://satyanarayan.findsoulmate.in/" target="_blank" class=" text-blue-600 ">https://satyanarayan.findsoulmate
+                    <a href="https://satyanarayan.findsoulmate.in/" target="_blank" class=" text-blue-600 " id="blog">https://satyanarayan.findsoulmate
                         .in/</a>
                 </div>
             </div>
-            <div class="h-[5rem] w-[24.7rem] ml-[12rem] flex justify-between mt-6">
+            <div class="w-[24.7rem] ml-[12rem] flex justify-between mt-6">
                 <div class="flex items-baseline gap-3 text-xs">
                     <i class="fa-brands fa-twitter"></i>
-                    <p>Kolkata, India</p>
+                    <a href="https://twitter.com/Satyana36155407" id="twitterId" target="_blank" class=" text-blue-600 ">Satyanarayan_sen</a>
                 </div>
                 <div class="flex items-baseline gap-3 text-xs">
-                    <i class="fa-solid fa-link"></i>
-                    <a href="https://satyanarayan.findsoulmate.in/" target="_blank" class=" text-blue-600 ">https://satyanarayan.findsoulmate
-                        .in/</a>
+                    <i class="fa-solid fa-building"></i>
+                    <p id="company">Upscale Market Research</p>
                 </div>
             </div>
         </div>
