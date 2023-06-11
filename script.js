@@ -3,6 +3,7 @@ let inputBoxErr = document.getElementById("inputBoxErr");
 let screenMode = document.getElementById("screenMode");
 let screenModeBtn = document.getElementById("screenModeBtn");
 let mainHeading = document.getElementById("mainHeading");
+let userId = inputBox.value;
 
 screenModeBtn.addEventListener('click',()=>{
     
@@ -35,18 +36,22 @@ function  lightModeEnable(){
     mainHeading.classList.remove("mainHeadingTop");
 }
 
-let userId = inputBox.value;
+
+
 function fetchUserInfo(){
+    let userIdFetch = inputBox.value;
+    console.log(userIdFetch);
     const url = "https://api.github.com/users/";
-    if (userId != "") {
-        getUserInfo(url + userId);
-        inputBoxErr.classList.remove("active");
-        console.log("hi");
-    }
-    else{
-        inputBoxErr.classList.add("active");
-        console.log("hello");
-    }
+  
+
+        if (userIdFetch != "") {
+            getUserInfo(url + userIdFetch);
+            inputBoxErr.classList.remove("active");      
+        }
+        else{
+            inputBoxErr.classList.add("active");
+        }
+    
 };
 
 
@@ -62,6 +67,7 @@ let userlocation = document.getElementById("location");
 let blog = document.getElementById("blog");
 let twitterId = document.getElementById("twitterId");
 let userCompany = document.getElementById("userCompany");
+let errorImg = document.getElementById("errorImg");
 
 async function getUserInfo(gitUrl){
     let response = await fetch(gitUrl).then((response)=>response.json());
